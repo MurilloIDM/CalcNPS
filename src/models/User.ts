@@ -5,16 +5,16 @@ import { v4 as uuid } from 'uuid';
 class User {
   
   @PrimaryColumn()
-  readonly id: string;
+  readonly id?: string;
 
   @Column()
-  name: string;
+  name?: string;
 
   @Column()
-  email: string;
+  email?: string;
 
   @CreateDateColumn()
-  created_at: Date;
+  created_at?: Date;
 
   constructor() {
     if (!this.id) {
